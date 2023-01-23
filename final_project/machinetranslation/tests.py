@@ -5,7 +5,7 @@ import unittest
 from translator import english_to_french, french_to_english
 
 
-class TestEnglishToFrench(unittest.TestCase):
+class TestTranlator(unittest.TestCase):
     """ Class to test text from english to french """
 
     def test_null_english_to_french(self):
