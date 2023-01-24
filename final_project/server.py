@@ -3,8 +3,8 @@ from flask import Flask, render_template, request
 from machinetranslation.translator import english_to_french, french_to_english
 
 app = Flask("Web Translator",
-            static_folder="/Users/mturous/Dev/xzceb-flask_eng_fr/final_project/static",
-            template_folder="/Users/mturous/Dev/xzceb-flask_eng_fr/final_project/templates")
+            static_folder="./final_project/static",
+            template_folder="./final_project/templates")
 
 
 @app.route("/englishToFrench")
@@ -32,4 +32,4 @@ def renderIndexPage():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080)
+    app.run(host="0.0.0.0", port=8082)
