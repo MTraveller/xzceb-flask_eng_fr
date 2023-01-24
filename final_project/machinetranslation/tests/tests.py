@@ -1,8 +1,7 @@
 """ Tests for translator.py """
-
 import unittest
 
-from translator import english_to_french, french_to_english
+from machinetranslation.translator import english_to_french, french_to_english
 
 
 class TestEnglishToFrench(unittest.TestCase):
@@ -17,6 +16,7 @@ class TestEnglishToFrench(unittest.TestCase):
         """ Function to test translation from
             english to french """
         self.assertEqual(english_to_french("Hello"), "Bonjour")
+        self.assertNotEqual(english_to_french("Hello"), "Bonne journée")
 
 
 class TestFrenchToEnglish(unittest.TestCase):
@@ -31,6 +31,8 @@ class TestFrenchToEnglish(unittest.TestCase):
         """ Function to test translation from
             french to english """
         self.assertEqual(french_to_english("Bonjour"), "Hello")
+        self.assertNotEqual(french_to_english("Bonjour"), "Good day")
 
 
-unittest.main()
+if __name__ == "__main__":
+    unittest.main()
